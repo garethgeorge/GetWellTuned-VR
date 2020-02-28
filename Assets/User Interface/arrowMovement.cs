@@ -14,7 +14,6 @@ public class arrowMovement : MonoBehaviour
       if (movement)
       {
         transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime);
-        Debug.Log(Time.deltaTime);
         if (transform.position.y > 3f)
         {
           movement = false;
