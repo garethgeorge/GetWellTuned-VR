@@ -19,7 +19,8 @@ public class MicrophoneManager : MonoBehaviour
   {
     // connect the microphone to our audio source
     audio = GetComponent<AudioSource>();
-    audio.clip = Microphone.Start(null, true, 1, 22050);
+    audio.time = 3;
+    // audio.clip = Microphone.Start(null, true, 1, 22050);
     audio.loop = true;
     audio.Play();
 
@@ -46,12 +47,11 @@ public class MicrophoneManager : MonoBehaviour
     audio.GetOutputData(buffer, 0);
     pitchTracker.ProcessBuffer(buffer);
 
-    lastPitchResult = pitchTracker.CurrentPitchRecord;
-    float curPitch = pitchTracker.CurrentPitchRecord.Pitch;
-
-    if (curPitch != -1)
+    PitchTracker.PitchRecord curPitch = pitchTracker.CurrentPitchRecord;
+    if (curPitch.Pitch != 0)
     {
-      message.text = "The pitch is: " + curPitch.ToString() + "\nNote: " + pitchTracker.CurrentPitchRecord.MidiNote;
+      lastPitchResult = curPitch;
+      message.text = "The pitch is: " + curPitch.Pitch.ToString() + "\nNote: " + curPitch.MidiNote;
     }
   }
 }
