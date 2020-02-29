@@ -20431,10 +20431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf315ca6bd74815a20188b516ff409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSourceReference: {fileID: 1510736806}
   bufferSize: 2048
-  audio: {fileID: 1510736806}
-  lineRenderer: {fileID: 0}
   message: {fileID: 1756303247}
+  recentRefPitches: 
 --- !u!1001 &1512291383
 PrefabInstance:
   m_ObjectHideFlags: 0
