@@ -6,7 +6,7 @@ using Pitch;
 
 public class MicrophoneManager : MonoBehaviour
 {
-  private AudioSource audioSourceMicin;
+  public AudioSource audioSourceMicin;
   public AudioSource audioSourceReference;
 
   private PitchTracker audioInTracker;
@@ -19,12 +19,13 @@ public class MicrophoneManager : MonoBehaviour
 
   public Text message;
 
-  private int recentRefPitchesIdx = 0;
+  private int recentRefPitchesIdx = 1000; // dumb fix with some index out of bounds errors 
   public int[] recentRefPitches;
+
+  public bool isMatching = false;
 
   void Start()
   {
-    audioSourceMicin = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
     audioSourceMicin.clip = Microphone.Start(null, true, 1, 22050);
     audioSourceMicin.loop = true;
     audioSourceMicin.Play();
@@ -32,10 +33,9 @@ public class MicrophoneManager : MonoBehaviour
     audioInTracker = new PitchTracker();
     audioInTracker.SampleRate = 22050;
 
-    audioSourceReference = GetComponent<AudioSource>();
     audioSourceReference.loop = false;
-    // audioSourceReference.time = 3; // 3 is nearly perfect sync...
-    audioSourceReference.time = (float)3;
+    // audioSourceReference.time = (float)2.5;
+    audioSourceReference.time = (float)3.0;
     audioSourceReference.Play();
 
     audioReferenceTracker = new PitchTracker();
@@ -50,6 +50,17 @@ public class MicrophoneManager : MonoBehaviour
 
     buffer = new float[bufferSize];
     recentRefPitches = new int[60];
+  }
+
+  bool FindMatch(int offset, int windowLength, int sampleNote, int forgiveness = 1)
+  {
+    for (int i = -offset - windowLength; i < -offset; ++i)
+    {
+      int value = recentRefPitches[(recentRefPitchesIdx + i) % recentRefPitches.Length];
+      if (System.Math.Abs(value - sampleNote) <= forgiveness)
+        return true;
+    }
+    return false;
   }
 
   // Update is called once per frame
@@ -71,13 +82,13 @@ public class MicrophoneManager : MonoBehaviour
 
     string text = "Current note is: " + audioInPitch.MidiNote + "\nExpected: " + audioRefPitch.MidiNote;
 
-    foreach (int value in recentRefPitches)
+    if (this.FindMatch(0, recentRefPitches.Length, audioInPitch.MidiNote))
     {
-      if (value != 0 && value == audioInPitch.MidiNote)
-      {
-        text = "THIS IS MATCHING!!! WOOHOO";
-      }
+      isMatching = true;
+      text = "IT IS A MATCH!!! WOOHOO!!!";
     }
+    else
+      isMatching = false;
 
     message.text = text;
   }
