@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorChanger : MonoBehaviour
 {
     public GameObject gameObject;
+    public GameObject Pompeii;
     Renderer rend;
     void Start()
     {
@@ -14,7 +15,8 @@ public class ColorChanger : MonoBehaviour
 
     public void colorChangeGreen()
     {
-        rend.material.color = Color.green;
+        // rend.material.color = Color.green;
+        Pompeii.SetActive(true);
     }
 
     public void colorChangeBlue()
