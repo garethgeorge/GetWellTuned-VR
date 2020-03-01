@@ -9,6 +9,8 @@ public class Audience : MonoBehaviour
   // private string[] names = { "idle", "applause", "applause2", "celebration", "celebration2", "celebration3" };
   private string[] animationNames = { "idle", "applause", "applause2", "idle", "applause", "applause2", "celebration" };
 
+  public OVRCameraRig cameraRig;
+
   // Use this for initialization
   void Start()
   {
@@ -22,7 +24,10 @@ public class Audience : MonoBehaviour
   IEnumerator setAnimation(Animation anim)
   {
     string thisAnimation = "idle";
-    if (MicrophoneManager.isMatching)
+    if (
+      MicrophoneManager.isMatching ||
+      (cameraRig && cameraRig.leftHandAnchor.transform.position.y > cameraRig.centerEyeAnchor.transform.position.y)
+    )
     {
       thisAnimation = animationNames[Random.Range(0, animationNames.Length)];
     }
