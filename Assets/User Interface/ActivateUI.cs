@@ -5,11 +5,14 @@ using UnityEngine;
 public class ActivateUI : MonoBehaviour
 {
     public GameObject arrow;
-    public GameObject canvas;
+    public GameObject SongSelectUI;
+    public GameObject RestartUI;
+    public GameObject SongActive;
     void Start()
     {
         arrow.SetActive(true);
-        canvas.SetActive(false);
+        SongSelectUI.SetActive(false);
+        RestartUI.SetActive(false);
     }
 
 
@@ -22,7 +25,14 @@ public class ActivateUI : MonoBehaviour
         if (other.gameObject.CompareTag("location"))
         {
             arrow.SetActive(false);
-            canvas.SetActive(true);
+            if (SongActive.activeSelf == true)
+            {
+                RestartUI.SetActive(true);
+            }
+            else
+            {
+                SongSelectUI.SetActive(true);
+            }
         }
     }
 
@@ -31,7 +41,8 @@ public class ActivateUI : MonoBehaviour
         if (other.gameObject.CompareTag("location"))
         {
             arrow.SetActive(true);
-            canvas.SetActive(false);
+            SongSelectUI.SetActive(false);
+            RestartUI.SetActive(false);
         }
     }
 

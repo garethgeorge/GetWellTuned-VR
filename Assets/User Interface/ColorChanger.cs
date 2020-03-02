@@ -6,6 +6,7 @@ public class ColorChanger : MonoBehaviour
 {
   public GameObject gameObject;
   public GameObject Pompeii;
+    public GameObject ActiveSong;
   Renderer rend;
   void Start()
   {
@@ -16,7 +17,8 @@ public class ColorChanger : MonoBehaviour
   public void colorChangeGreen()
   {
     // rend.material.color = Color.green;
-    Pompeii.SetActive(!Pompeii.activeSelf);
+    Pompeii.SetActive(true);
+    ActiveSong.SetActive(true);
   }
 
   public void colorChangeBlue()
