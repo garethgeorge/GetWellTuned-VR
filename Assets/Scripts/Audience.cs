@@ -15,11 +15,16 @@ public class Audience : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Animation[] AudienceMembers = gameObject.GetComponentsInChildren<Animation>();
-        foreach (Animation anim in colorChanger.audienceActive)
+        if (colorChanger.audienceActivated == true)
         {
-            StartCoroutine(setAnimation(anim));
+            foreach (Animation anim in colorChanger.audienceActive)
+            {
+                StartCoroutine(setAnimation(anim));
+            }
+
         }
+        // Animation[] AudienceMembers = gameObject.GetComponentsInChildren<Animation>();
+
     }
 
     IEnumerator setAnimation(Animation anim)

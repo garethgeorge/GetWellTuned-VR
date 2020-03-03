@@ -337,6 +337,7 @@ MonoBehaviour:
   Audience: {fileID: 0}
   crowd_size: 0
   audienceActive: []
+  audienceActivated: 0
 --- !u!114 &68491823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,6 +3137,7 @@ MonoBehaviour:
   Audience: {fileID: 0}
   crowd_size: 0
   audienceActive: []
+  audienceActivated: 0
 --- !u!1001 &412958460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20446,7 +20448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1408985908
 Transform:
   m_ObjectHideFlags: 0
@@ -22110,6 +22112,7 @@ MonoBehaviour:
   Audience: {fileID: 1408985907}
   crowd_size: 0
   audienceActive: []
+  audienceActivated: 0
 --- !u!114 &1592975902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23667,6 +23670,7 @@ MonoBehaviour:
   Audience: {fileID: 1408985907}
   crowd_size: 0
   audienceActive: []
+  audienceActivated: 0
 --- !u!114 &1876779326
 MonoBehaviour:
   m_ObjectHideFlags: 0

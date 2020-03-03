@@ -12,7 +12,9 @@ public class ColorChanger : MonoBehaviour
     public GameObject Audience;
     public int crowd_size;
     public List<Animation> audienceActive;
+    public bool audienceActivated = false;
     // UnityEngine.Video.VideoPlayer screen;
+    private int rand_num;
     void Start()
     {
         rend = gameObject.GetComponent<Renderer>();
@@ -41,8 +43,8 @@ public class ColorChanger : MonoBehaviour
 
     public void audienceActivate0()
     {
-
-        Audience.SetActive(true);
+        audienceActivated = false;
+        Audience.SetActive(false);
         crowd_size = 0;
 
 
@@ -50,16 +52,23 @@ public class ColorChanger : MonoBehaviour
 
     public void audienceActivate10()
     {
-
-        Audience.SetActive(true);
+        audienceActivated = true;
         crowd_size = 10;
 
         Animation[] AudienceMembers = Audience.GetComponentsInChildren<Animation>();
 
-        // depends on which button clicked
         for (int i = 0; i < crowd_size; i++)
         {
-            audienceActive.Add(AudienceMembers[Random.Range(0, AudienceMembers.Length)]);
+            rand_num = Random.Range(0, AudienceMembers.Length);
+            Audience.transform.GetChild(rand_num).gameObject.SetActive(true);
+            // audienceActive.Add(AudienceMembers[]);
+            audienceActive.Add(AudienceMembers[rand_num]);
+
         }
+
+
+
+
+
     }
 }
