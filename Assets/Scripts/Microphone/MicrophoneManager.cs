@@ -27,6 +27,8 @@ public class MicrophoneManager : MonoBehaviour
   public static bool isMatching = false;
   public static float score = 0;
 
+  public Text finalScore;
+
   void Start()
   {
     audioSourceMicin.clip = Microphone.Start(null, true, 1, 22050);
@@ -54,6 +56,8 @@ public class MicrophoneManager : MonoBehaviour
     buffer = new float[bufferSize];
     recentRefPitches = new int[60];
     score = 0;
+
+
   }
 
   bool FindMatch(int offset, int windowLength, int sampleNote, int forgiveness = 1)
@@ -108,5 +112,7 @@ public class MicrophoneManager : MonoBehaviour
     text += "\nScore: " + Mathf.Round(score * 1000).ToString();
 
     message.text = text;
-  }
+
+    finalScore.text = "congratulations, your final score is: " + Mathf.Round(score * 1000).ToString();
+    }
 }

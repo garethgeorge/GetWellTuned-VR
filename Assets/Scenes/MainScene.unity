@@ -338,6 +338,8 @@ MonoBehaviour:
   crowd_size: 0
   audienceActive: []
   audienceActivated: 0
+  microphoneManager: {fileID: 0}
+  cameraRig: {fileID: 0}
 --- !u!114 &68491823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,6 +554,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_Name
       value: Audience 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400076, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -814,6 +820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.538043
@@ -945,6 +955,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3880f8bfaacfb6843880b99fa38284f3, type: 3}
       propertyPath: m_Name
       value: Audience (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3880f8bfaacfb6843880b99fa38284f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3880f8bfaacfb6843880b99fa38284f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2054,6 +2068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4920429
@@ -3061,6 +3079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.646
@@ -3138,6 +3160,8 @@ MonoBehaviour:
   crowd_size: 0
   audienceActive: []
   audienceActivated: 0
+  microphoneManager: {fileID: 0}
+  cameraRig: {fileID: 0}
 --- !u!1001 &412958460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3705,6 +3729,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
       propertyPath: m_Name
       value: Audience 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4351,6 +4379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.13
@@ -4414,6 +4446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.328041
@@ -4470,6 +4506,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_Name
       value: Audience 5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4539,6 +4579,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_Name
       value: Audience 3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4849,7 +4893,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pompeii by Bastille
+  m_Text: 10
 --- !u!222 &744824023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4993,6 +5037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9019585
@@ -5083,6 +5131,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_Name
       value: Audience 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5360,6 +5412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 4 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.2700424
@@ -5486,6 +5542,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_Name
       value: Audience 3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5868,6 +5928,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_Name
       value: Audience 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400076, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19577,6 +19641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3199158
@@ -19651,6 +19719,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_Name
       value: Audience 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20386,6 +20458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.70804214
@@ -20448,7 +20524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1408985908
 Transform:
   m_ObjectHideFlags: 0
@@ -20575,6 +20651,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_Name
       value: Audience 5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20759,6 +20839,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_Name
       value: Audience 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400076, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21311,12 +21395,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510736804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.06601, y: -4.3446293, z: -2.9396007}
+  m_LocalPosition: {x: 0, y: -0.6989999, z: 0.34599996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 735357782}
-  m_Father: {fileID: 1634228846}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1510736806
 AudioSource:
@@ -21432,6 +21516,7 @@ MonoBehaviour:
   bufferSize: 2048
   message: {fileID: 1756303247}
   recentRefPitches: 
+  finalScore: {fileID: 0}
 --- !u!82 &1510736808
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21539,6 +21624,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_Name
       value: Audience 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21723,6 +21812,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_Name
       value: Audience 5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21931,6 +22024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 4 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5699577
@@ -22083,15 +22180,15 @@ RectTransform:
   m_GameObject: {fileID: 1592975899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0017730494, y: 0.0017730494, z: 0.0017730494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1645010436}
-  m_Father: {fileID: 1767736698}
-  m_RootOrder: 0
+  m_Father: {fileID: 19037154}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.35455322, y: -0.08864212}
+  m_AnchoredPosition: {x: 199.96773, y: -49.994213}
   m_SizeDelta: {x: 100, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592975901
@@ -22113,6 +22210,8 @@ MonoBehaviour:
   crowd_size: 0
   audienceActive: []
   audienceActivated: 0
+  microphoneManager: {fileID: 0}
+  cameraRig: {fileID: 0}
 --- !u!114 &1592975902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22191,7 +22290,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1592975901}
-        m_MethodName: colorChangeGreen
+        m_MethodName: audienceActivate0
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22466,9 +22565,8 @@ Transform:
   - {fileID: 19037154}
   - {fileID: 1452623054}
   - {fileID: 185927822}
-  - {fileID: 1510736805}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634232774
 GameObject:
@@ -22572,6 +22670,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_Name
       value: Audience 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22691,7 +22793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pompeii by Bastille
+  m_Text: 0
 --- !u!222 &1645010438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22934,6 +23036,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_Name
       value: Audience 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400076, guid: ed90a41b7cfee034ca54be9d3de341cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23243,6 +23349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.523041
@@ -23337,38 +23447,6 @@ Transform:
   m_Father: {fileID: 1073991394}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1767736697
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1767736698}
-  m_Layer: 0
-  m_Name: Crowd
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1767736698
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767736697}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 564.00006, y: 564.00006, z: 564.00006}
-  m_Children:
-  - {fileID: 1592975900}
-  - {fileID: 1876779324}
-  m_Father: {fileID: 19037154}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1797258868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23379,6 +23457,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_Name
       value: Audience 5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efca1169eb52c4b45a5f9a4535cb62d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23495,6 +23577,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_Name
       value: Audience 4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23641,15 +23727,15 @@ RectTransform:
   m_GameObject: {fileID: 1876779323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0017730494, y: 0.0017730494, z: 0.0017730494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 744824021}
-  m_Father: {fileID: 1767736698}
-  m_RootOrder: 1
+  m_Father: {fileID: 19037154}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.08864212}
+  m_AnchoredPosition: {x: 0, y: -49.994213}
   m_SizeDelta: {x: 100, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1876779325
@@ -23671,6 +23757,8 @@ MonoBehaviour:
   crowd_size: 0
   audienceActive: []
   audienceActivated: 0
+  microphoneManager: {fileID: 0}
+  cameraRig: {fileID: 0}
 --- !u!114 &1876779326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23749,7 +23837,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1876779325}
-        m_MethodName: colorChangeGreen
+        m_MethodName: audienceActivate10
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23852,6 +23940,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_Name
       value: Audience 3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 028a5ff2441fd6e4da0e76c7cefc3e8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24822,6 +24914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 76a4ddcefddf783499cac977dc6638e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -24914,6 +25010,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3880f8bfaacfb6843880b99fa38284f3, type: 3}
       propertyPath: m_Name
       value: Audience (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3880f8bfaacfb6843880b99fa38284f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3880f8bfaacfb6843880b99fa38284f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25437,6 +25537,10 @@ PrefabInstance:
     - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_Name
       value: Audience 4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: a593ffef11c96604988afabc72f6904e, type: 3}
       propertyPath: m_LocalPosition.x

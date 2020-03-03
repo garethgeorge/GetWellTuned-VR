@@ -13,7 +13,7 @@ public class Audience : MonoBehaviour
     public ColorChanger colorChanger;
 
     // Use this for initialization
-    void Start()
+   /* void Update()
     {
         if (colorChanger.audienceActivated == true)
         {
@@ -25,8 +25,8 @@ public class Audience : MonoBehaviour
         }
         // Animation[] AudienceMembers = gameObject.GetComponentsInChildren<Animation>();
 
-    }
-
+    }*/
+/*
     IEnumerator setAnimation(Animation anim)
     {
         string thisAnimation = "idle";
@@ -47,5 +47,5 @@ public class Audience : MonoBehaviour
         yield return new WaitForSeconds(timePeriod);
         StartCoroutine(setAnimation(anim));
         yield return null;
-    }
+    }*/
 }
