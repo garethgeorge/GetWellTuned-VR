@@ -8,6 +8,7 @@ public class ActivateUI : MonoBehaviour
     public GameObject SongSelectUI;
     public GameObject RestartUI;
     public GameObject SongActive;
+    public GameObject finalDisplayCanvas;
     void Start()
     {
         arrow.SetActive(true);
@@ -38,11 +39,13 @@ public class ActivateUI : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        
         if (other.gameObject.CompareTag("location"))
         {
             arrow.SetActive(true);
             SongSelectUI.SetActive(false);
             RestartUI.SetActive(false);
+            finalDisplayCanvas.SetActive(false);
         }
     }
 
