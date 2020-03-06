@@ -21,8 +21,9 @@ public class MicrophoneManager : MonoBehaviour
 
   public Text message;
 
-  private int recentRefPitchesIdx = 1000; // dumb fix with some index out of bounds errors 
-  public int[] recentRefPitches;
+  public static int recentRefPitchesIdx = 1000; // dumb fix with some index out of bounds errors 
+  public static int[] recentRefPitches;
+  public static int[] recentUserPitches; // actually uses the same index as ref pitches
 
   public static bool isMatching = false;
   public static float score = 0;
@@ -55,22 +56,22 @@ public class MicrophoneManager : MonoBehaviour
 
     buffer = new float[bufferSize];
     recentRefPitches = new int[60];
+    recentUserPitches = new int[60];
     score = 0;
   }
 
-  bool FindMatch(int offset, int windowLength, int sampleNote, int forgiveness = 1)
+  bool FindMatch(int offset, int windowLength, int sampleNote, int forgiveness = 0)
   {
     if (sampleNote == 0)
       return false;
     for (int i = -offset - windowLength; i < -offset; ++i)
     {
-      int value = recentRefPitches[(recentRefPitchesIdx + i) % recentRefPitches.Length];
-      if (System.Math.Abs(value - sampleNote) <= forgiveness)
+      int value = recentRefPitches[(recentRefPitchesIdx + i) % recentRefPitches.Length] % 12;
+      if (value == sampleNote % 12)
         return true;
     }
     return false;
   }
-
   // Update is called once per frame
   void Update()
   {
@@ -94,22 +95,27 @@ public class MicrophoneManager : MonoBehaviour
       audioRefPitch = curPitchRef;
       audioRefPitchLastUpdate = 0;
     }
+    // store the user's midi note and the reference midi note in the history array 
+    recentUserPitches[recentRefPitchesIdx % recentRefPitches.Length] = audioInPitch.MidiNote;
     recentRefPitches[(recentRefPitchesIdx++) % recentRefPitches.Length] = audioRefPitch.MidiNote;
 
     string text = "Current pitch: " + audioInPitch.MidiNote + "\nTarget: " + audioRefPitch.MidiNote;
 
-    if (this.FindMatch(0, recentRefPitches.Length, audioInPitch.MidiNote))
+    if (this.FindMatch(0, recentRefPitches.Length / 2, audioInPitch.MidiNote))
     {
       isMatching = true;
-      text = "MATCHING! GREAT JOB!!!";
       score += Time.deltaTime;
+      message.color = Color.green;
     }
     else
+    {
       isMatching = false;
+      message.color = Color.white;
+    }
 
     text += "\nScore: " + Mathf.Round(score * 1000).ToString();
 
     message.text = text;
     finalScore.text = "Congratulations! Your final score is :" + Mathf.Round(score * 1000).ToString();
-    }
+  }
 }
