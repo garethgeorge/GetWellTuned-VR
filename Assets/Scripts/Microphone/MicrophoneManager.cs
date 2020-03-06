@@ -27,7 +27,6 @@ public class MicrophoneManager : MonoBehaviour
   public static bool isMatching = false;
   public static float score = 0;
 
-  public Text finalScore;
 
   void Start()
   {
@@ -110,6 +109,5 @@ public class MicrophoneManager : MonoBehaviour
     text += "\nScore: " + Mathf.Round(score * 1000).ToString();
 
     message.text = text;
-    finalScore.text = "Congratulations! Your final score is :" + Mathf.Round(score * 1000).ToString();
     }
 }
