@@ -32,13 +32,13 @@ public class Audience : MonoBehaviour
       thisAnimation = animationNames[Random.Range(0, animationNames.Length)];
     }
 
-    float timePeriod = Random.Range(0f, 4f);
+    // float timePeriod = Random.Range(0f, 4f);
 
     anim.wrapMode = WrapMode.Loop;
     anim.GetComponent<Animation>().CrossFade(thisAnimation);
-    anim[thisAnimation].time = timePeriod;
+    anim[thisAnimation].speed = Random.Range(0.5f, 2f);
 
-    yield return new WaitForSeconds(timePeriod);
+    yield return new WaitForSeconds(anim[thisAnimation].length * anim[thisAnimation].speed);
     StartCoroutine(setAnimation(anim));
     yield return null;
   }
