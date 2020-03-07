@@ -84,12 +84,12 @@ public class MicrophoneManager : MonoBehaviour
     audioInPitchLastUpdate++;
     PitchTracker.PitchRecord curPitchRef = audioReferenceTracker.CurrentPitchRecord;
     audioRefPitchLastUpdate++;
-    if (curPitch.MidiNote != 0 || audioInPitchLastUpdate > 60)
+    if (curPitch.MidiNote != 0 || audioInPitchLastUpdate > 15)
     {
       audioInPitch = curPitch;
       audioInPitchLastUpdate = 0;
     }
-    if (curPitchRef.MidiNote != 0 || audioRefPitchLastUpdate > 60)
+    if (curPitchRef.MidiNote != 0 || audioRefPitchLastUpdate > 15)
     {
       audioRefPitch = curPitchRef;
       audioRefPitchLastUpdate = 0;
