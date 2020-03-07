@@ -100,7 +100,7 @@ public class MicrophoneManager : MonoBehaviour
 
     string text = "Current pitch: " + audioInPitch.MidiNote + "\nTarget: " + audioRefPitch.MidiNote;
 
-    if (this.FindMatch(0, recentRefPitches.Length / 2, audioInPitch.MidiNote))
+    if (this.FindMatch(recentRefPitches.Length / 4, recentRefPitches.Length / 2, audioInPitch.MidiNote))
     {
       isMatching = true;
       score += Time.deltaTime;

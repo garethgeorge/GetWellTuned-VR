@@ -16,7 +16,7 @@ public class CanvasPlotPitch : MonoBehaviour
   void Start()
   {
     width = 128;
-    height = 24;
+    height = 48;
     drawTexture = new Texture2D(width, height);
     fillRect(drawTexture, 0, 0, width, height, Color.green);
     rawImage.texture = drawTexture;
