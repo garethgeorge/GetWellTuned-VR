@@ -25,12 +25,9 @@ public class CanvasPlotPitch : MonoBehaviour
   void fillRect(Texture2D texture, int x, int y, int w, int h, Color color)
   {
     var array = texture.GetPixels(x, y, w, h);
-    for (int dx = 0; dx < w; ++dx)
+    for (int idx = 0; idx < array.Length; ++idx)
     {
-      for (int dy = 0; dy < h; ++dy)
-      {
-        array[(y + dy) * texture.width + x + dx] = color;
-      }
+      array[idx] = color;
     }
     texture.SetPixels(x, y, w, h, array);
   }
