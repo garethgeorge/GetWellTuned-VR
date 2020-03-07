@@ -19,6 +19,7 @@ public class CanvasPlotPitch : MonoBehaviour
     height = 48;
     drawTexture = new Texture2D(width, height);
     fillRect(drawTexture, 0, 0, width, height, Color.green);
+    rawImage.texture = drawTexture;
   }
 
   void fillRect(Texture2D texture, int x, int y, int w, int h, Color color)
@@ -32,7 +33,6 @@ public class CanvasPlotPitch : MonoBehaviour
       }
     }
     texture.SetPixels(array);
-    texture.Apply();
   }
 
   void drawLine(Texture2D tex, int x0, int y0, int x1, int y1, Color col)
@@ -112,9 +112,8 @@ public class CanvasPlotPitch : MonoBehaviour
       fillRect(drawTexture, xStepSize * i, (pitchAtIndex % 12) * yStepSize, xStepSize, yStepSize, Color.white);
     }
 
-    // drawTexture.SetPixel(index % drawTexture.width, index / drawTexture.width, Color.red);
-    // drawTexture.Apply();
-    rawImage.texture = drawTexture;
+    drawTexture.Apply();
+
   }
 
 }
