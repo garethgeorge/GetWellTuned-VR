@@ -66,7 +66,7 @@ public class MicrophoneManager : MonoBehaviour
     for (int i = -offset - windowLength; i < -offset; ++i)
     {
       int value = recentRefPitches[(recentRefPitchesIdx + i) % recentRefPitches.Length] % 12;
-      if (value == sampleNote % 12)
+      if (value != 0 && value == sampleNote % 12)
         return true;
     }
     return false;
