@@ -44,7 +44,7 @@ public class DiscoTileController : MonoBehaviour
 
   void OnTriggerEnter(Collider other)
   {
-    if (intersectionCount == 0)
+    if (intersectionCount == 0 && myRenderer)
       TurnOn();
     intersectionCount++;
   }
@@ -52,7 +52,7 @@ public class DiscoTileController : MonoBehaviour
   void OnTriggerExit(Collider other)
   {
     intersectionCount--;
-    if (intersectionCount == 0)
+    if (intersectionCount == 0 && myRenderer)
       TurnOff();
   }
 
