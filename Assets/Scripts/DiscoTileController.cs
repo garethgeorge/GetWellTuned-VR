@@ -10,12 +10,13 @@ public class DiscoTileController : MonoBehaviour
   private Color myColor;
   private Color myColorDim;
 
-  private int enteredCount = 0;
   private Material myMat;
   private Material myMatDim;
   private MeshRenderer myRenderer;
 
   public Light light;
+
+  private int intersectionCount = 0;
 
   void Start()
   {
@@ -43,18 +44,16 @@ public class DiscoTileController : MonoBehaviour
 
   void OnTriggerEnter(Collider other)
   {
-    TurnOn();
+    if (intersectionCount == 0)
+      TurnOn();
+    intersectionCount++;
   }
 
-  IEnumerator OnTriggerExit(Collider other)
+  void OnTriggerExit(Collider other)
   {
-    int lastEnteredCount = ++enteredCount;
-    yield return new WaitForSeconds(0.1f);
-    if (lastEnteredCount == enteredCount)
-    {
+    intersectionCount--;
+    if (intersectionCount == 0)
       TurnOff();
-    }
-    yield return null;
   }
 
   void PickNewColor()
