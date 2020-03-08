@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class DiscoFloorController : MonoBehaviour
 {
-  public GameObject template;
+  public Object prefab;
 
   // Start is called before the first frame update
   void Start()
   {
-    // discoFloor.
-    MeshRenderer renderer = (MeshRenderer)gameObject.GetComponent<MeshRenderer>();
-    // renderer.bounds
+    BoxCollider collider = (BoxCollider)gameObject.GetComponent<BoxCollider>();
 
-    Instantiate(template, renderer.bounds.min, new Quaternion());
-  }
-
-  // Update is called once per frame
-  void Update()
-  {
-
+    for (float x = -5f; x <= 5f; x += .5f)
+    {
+      for (float z = -1f; z <= 1f; z += .5f)
+      {
+        Instantiate(prefab, transform.position + new Vector3(x, 0f, z), Quaternion.identity, transform);
+      }
+    }
   }
 }

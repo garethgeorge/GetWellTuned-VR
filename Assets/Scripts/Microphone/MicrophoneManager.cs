@@ -54,8 +54,8 @@ public class MicrophoneManager : MonoBehaviour
     }
 
     buffer = new float[bufferSize];
-    recentRefPitches = new int[60];
-    recentUserPitches = new int[60];
+    recentRefPitches = new int[120];
+    recentUserPitches = new int[120];
     score = 0;
   }
 
@@ -100,7 +100,7 @@ public class MicrophoneManager : MonoBehaviour
 
     string text = "Current pitch: " + audioInPitch.MidiNote + "\nTarget: " + audioRefPitch.MidiNote;
 
-    if (this.FindMatch(recentRefPitches.Length / 4, recentRefPitches.Length / 2, audioInPitch.MidiNote))
+    if (this.FindMatch(recentRefPitches.Length / 4, recentRefPitches.Length * 3 / 4, audioInPitch.MidiNote))
     {
       isMatching = true;
       score += Time.deltaTime;
