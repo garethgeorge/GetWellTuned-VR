@@ -6,6 +6,8 @@ public class DiscoFloorController : MonoBehaviour
 {
   public Object prefab;
 
+  static public int movementScore;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -18,5 +20,7 @@ public class DiscoFloorController : MonoBehaviour
         Instantiate(prefab, transform.position + new Vector3(x, 0f, z), Quaternion.identity, transform);
       }
     }
+
+    movementScore = 0;
   }
 }

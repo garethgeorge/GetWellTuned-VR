@@ -45,7 +45,14 @@ public class DiscoTileController : MonoBehaviour
   void OnTriggerEnter(Collider other)
   {
     if (intersectionCount == 0 && myRenderer)
+    {
       TurnOn();
+      if (MicrophoneManager.isMatchingDecay < 1000)
+      {
+        MicrophoneManager.isMatchingDecay += 100;
+      }
+      DiscoFloorController.movementScore += 100;
+    }
     intersectionCount++;
   }
 

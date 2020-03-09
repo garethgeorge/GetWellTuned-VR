@@ -115,7 +115,7 @@ public class MicrophoneManager : MonoBehaviour
       message.color = Color.white;
     }
 
-    text += "\nScore: " + Mathf.Round(score * 1000).ToString();
+    text += "\nScore: " + Mathf.Round(score * 1000).ToString() + "\nMovement Score: " + DiscoFloorController.movementScore;
 
     message.text = text;
   }
