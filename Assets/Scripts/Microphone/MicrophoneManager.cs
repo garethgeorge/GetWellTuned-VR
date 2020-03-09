@@ -26,6 +26,7 @@ public class MicrophoneManager : MonoBehaviour
   public static int[] recentUserPitches; // actually uses the same index as ref pitches
 
   public static bool isMatching = false;
+  public static int isMatchingDecay = 0;
   public static float score = 0;
 
 
@@ -100,9 +101,11 @@ public class MicrophoneManager : MonoBehaviour
 
     string text = "Current pitch: " + audioInPitch.MidiNote + "\nTarget: " + audioRefPitch.MidiNote;
 
+    isMatchingDecay--;
     if (this.FindMatch(recentRefPitches.Length / 4, recentRefPitches.Length * 3 / 4, audioInPitch.MidiNote))
     {
       isMatching = true;
+      isMatchingDecay = 60 * 10;
       score += Time.deltaTime;
       message.color = Color.green;
     }
