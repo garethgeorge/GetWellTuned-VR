@@ -99,7 +99,7 @@ public class MicrophoneManager : MonoBehaviour
     recentUserPitches[recentRefPitchesIdx % recentRefPitches.Length] = audioInPitch.MidiNote;
     recentRefPitches[(recentRefPitchesIdx++) % recentRefPitches.Length] = audioRefPitch.MidiNote;
 
-    string text = "Current pitch: " + audioInPitch.MidiNote + "\nTarget: " + audioRefPitch.MidiNote;
+    string text = "Current pitch: " + audioInPitch.MidiNote + "\t\tTarget: " + audioRefPitch.MidiNote;
 
     isMatchingDecay--;
     if (this.FindMatch(recentRefPitches.Length / 4, recentRefPitches.Length * 3 / 4, audioInPitch.MidiNote))
@@ -115,7 +115,7 @@ public class MicrophoneManager : MonoBehaviour
       message.color = Color.white;
     }
 
-    text += "\nScore: " + Mathf.Round(score * 1000).ToString() + "\nMovement Score: " + DiscoFloorController.movementScore;
+    text += "\nSing Score: " + Mathf.Round(score * 1000).ToString() + "\nMovement Score: " + DiscoFloorController.movementScore;
 
     message.text = text;
   }
