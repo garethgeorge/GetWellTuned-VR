@@ -29,6 +29,8 @@ public class MicrophoneManager : MonoBehaviour
   public static int isMatchingDecay = 0;
   public static float score = 0;
 
+  public float referenceTrackOffset;
+
 
   void Start()
   {
@@ -41,7 +43,7 @@ public class MicrophoneManager : MonoBehaviour
 
     audioSourceReference.loop = false;
     // audioSourceReference.time = (float)2.5;
-    audioSourceReference.time = (float)3.0;
+    audioSourceReference.time = referenceTrackOffset;
     audioSourceReference.Play();
 
     audioReferenceTracker = new PitchTracker();
@@ -105,7 +107,7 @@ public class MicrophoneManager : MonoBehaviour
     if (this.FindMatch(recentRefPitches.Length / 4, recentRefPitches.Length * 3 / 4, audioInPitch.MidiNote))
     {
       isMatching = true;
-      isMatchingDecay = 60 * 10;
+      isMatchingDecay = 60 * 3;
       score += Time.deltaTime;
       message.color = Color.green;
     }

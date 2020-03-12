@@ -25,8 +25,8 @@ public class Crowd : MonoBehaviour
     foreach (Animator anim in AudienceMembers)
     {
       if (
-        MicrophoneManager.isMatchingDecay > 0 
-        // (cameraRig && cameraRig.leftHandAnchor.transform.position.y > cameraRig.centerEyeAnchor.transform.position.y)
+        MicrophoneManager.isMatchingDecay > 0
+      // (cameraRig && cameraRig.leftHandAnchor.transform.position.y > cameraRig.centerEyeAnchor.transform.position.y)
       )
       {
         anim.SetBool("match", true);
