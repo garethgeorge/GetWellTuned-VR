@@ -49,10 +49,10 @@ public class DiscoTileController : MonoBehaviour
     if (intersectionCount == 0 && myRenderer)
     {
       TurnOn();
-      if (MicrophoneManager.isMatchingDecay < 40)
-      {
-        MicrophoneManager.isMatchingDecay = 40;
-      }
+      // if (MicrophoneManager.isMatchingDecay < 40)
+      // {
+      //   MicrophoneManager.isMatchingDecay = 40;
+      // }
       DiscoFloorController.movementScore += 100;
     }
     intersectionCount++;

@@ -12,21 +12,25 @@ public class Crowd : MonoBehaviour
   public OVRCameraRig cameraRig;
   Animator[] AudienceMembers;
 
-
-
   // Use this for initialization
   void Start()
   {
-    AudienceMembers = gameObject.GetComponentsInChildren<Animator>();
+
   }
 
   void Update()
   {
+    AudienceMembers = gameObject.GetComponentsInChildren<Animator>();
     foreach (Animator anim in AudienceMembers)
     {
       if (
-        MicrophoneManager.isMatchingDecay > 0
-      // (cameraRig && cameraRig.leftHandAnchor.transform.position.y > cameraRig.centerEyeAnchor.transform.position.y)
+        MicrophoneManager.isMatchingDecay > 0f || (
+          cameraRig &&
+          (
+            (cameraRig.leftHandAnchor.transform.position.y > cameraRig.centerEyeAnchor.transform.position.y) ||
+            (cameraRig.rightHandAnchor.transform.position.y > cameraRig.centerEyeAnchor.transform.position.y)
+          )
+        )
       )
       {
         anim.SetBool("match", true);
